@@ -105,20 +105,20 @@ router.post("/add", requiresAuth(), async (req, res, next) => {
     }
 
     try {
-        client.query(
+        await client.query(
             `
                 INSERT INTO settings (
                     user_id,
                     auth_token,
                     device_id,
                     timestamp_hash,
-        
-                    bot_id, 
-                    chat_id, 
-        
+
+                    bot_id,
+                    chat_id,
+
                     name,
                     avatar,
-                    
+
                     auth0_sub
                 )
                 VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)

@@ -127,7 +127,7 @@ router.post(
         }
 
         try {
-            const [set1, set2] = await red_client
+            await red_client
                 .multi()
                 .set(`token:${token}`, req.body.user_id, {EX: 600,})
                 .set(`user_token:${req.body.user_id}`, token, {EX:600})
