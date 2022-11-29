@@ -1,0 +1,6 @@
+node_modules
+.prettierignore
+.gitignore
+*.env
+tailwind.config.js
+private
